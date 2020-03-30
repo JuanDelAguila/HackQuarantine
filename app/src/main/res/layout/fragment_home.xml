@@ -4,34 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#434343"
+    android:background="@color/defaultGrey"
+    android:backgroundTint="@color/defaultGrey"
     tools:context=".ui.home.HomeFragment">
-
-    <TextView
-        android:id="@+id/text_home"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.tabs.TabLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:backgroundTint="#373737"
+        android:foregroundTint="#373737"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:tabBackground="@color/tabBackground"
+        app:tabTextColor="@color/tabText">
+
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/home_tab_1" />
+            android:foregroundTint="#434343"
+            android:text="@string/home_tab_1"
+            android:tint="#FFFFFF" />
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
