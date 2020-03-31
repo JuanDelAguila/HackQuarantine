@@ -10,10 +10,14 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+    <string name="routines">Routines</string>
+    <string name="profile">Profile</string>
+
 
     <string name="home_second">Home Second</string>
 
     <!-- TAB NAMES -->
     <string name="home_tab_1">GOALS</string>
     <string name="home_tab_2">CALENDAR</string>
+    <string name="textview">TextView</string>
 </resources>
