@@ -3,13 +3,16 @@ package com.jda.hackquarantine;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
+import com.jda.hackquarantine.ui.home.HomeFragment;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -22,6 +25,9 @@ import java.text.DateFormat;
 import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
+
+    /** Added this to navigate home when clicking the date */
+    private Fragment homeFragment = new HomeFragment();
 
     private AppBarConfiguration mAppBarConfiguration;
 
@@ -56,12 +62,17 @@ public class MainActivity extends AppCompatActivity {
          */
         Calendar calendar = Calendar.getInstance();
         String currentDate = DateFormat.getDateInstance(DateFormat.FULL).format(calendar.getTime());
+        TextView date_field = findViewById(R.id.text_view_date);
+        date_field.setText(currentDate);
 
-        View home_title = findViewById(R.id.nav_home);
-        
-        //TextView textViewDate = findViewById(R.id.text_view_date);
-        //textViewDate.setText(currentDate);
-
+        date_field.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.mainView , homeFragment);
+                transaction.commit();
+            }
+        });
 
 
     }

@@ -2,6 +2,7 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -38,13 +39,17 @@
 
     <TextView
         android:id="@+id/text_view_date"
-        android:layout_width="261dp"
-        android:layout_height="wrap_content"
+        android:layout_width="295dp"
+        android:layout_height="54dp"
+        android:background="@color/tabBackground"
+        android:clickable="true"
+        android:fontFamily="sans-serif"
+        android:gravity="center_vertical"
         android:text="Date"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@color/tabText"
-        android:textSize="24sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_anchor="@+id/appBarLayout"
         app:layout_anchorGravity="center" />
