@@ -26,17 +26,6 @@
 
     <include layout="@layout/content_main" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        android:backgroundTint="@color/tabBackground"
-        android:tint="#FFFFFF"
-        app:backgroundTint="@color/tabBackground"
-        app:srcCompat="@android:drawable/ic_input_add" />
-
     <TextView
         android:id="@+id/text_view_date"
         android:layout_width="295dp"
