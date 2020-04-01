@@ -86,10 +86,14 @@ public class MainActivity extends AppCompatActivity {
          */
 
         SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
-        ViewPager viewPager = (ViewPager) findViewById(R.id.view_pager);
+
+        View inflatedView = getLayoutInflater().inflate(R.layout.fragment_home, null);
+
+        ViewPager viewPager = (ViewPager) inflatedView.findViewById(R.id.view_pager);
         viewPager.setAdapter(sectionsPagerAdapter);
-        TabLayout tabs = findViewById(R.id.tabLayout);
+        TabLayout tabs = (TabLayout) inflatedView.findViewById(R.id.tabLayout);
         tabs.setupWithViewPager(viewPager);
+
     }
 
     @Override

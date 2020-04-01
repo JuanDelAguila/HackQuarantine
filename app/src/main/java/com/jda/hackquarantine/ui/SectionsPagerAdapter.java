@@ -33,8 +33,8 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
         switch (position){
             case 0:
                 return ToDoFragment.newInstance(1);
-                /*case 1:
-                return CalendarFragment.newInstance(2);*/
+            case 1:
+                return CalendarFragment.newInstance(2);
             default:
                 return null;
         }
