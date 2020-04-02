@@ -47,7 +47,6 @@
 
         </RelativeLayout>
 
-
     </com.google.android.material.appbar.AppBarLayout>
 
     <com.google.android.material.tabs.TabLayout

@@ -8,7 +8,6 @@
     android:background="@color/defaultGrey"
     >
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:textColor="@color/tabText"
         android:layout_width="match_parent"
@@ -22,6 +21,18 @@
         android:layout_width="fill_parent"
         android:layout_height="match_parent">
 
+        <TextView
+            android:id="@+id/goalAddedText"
+            android:layout_width="match_parent"
+            android:layout_height="681dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:text="@string/set_a_goal_base_text"
+            android:textColor="@color/tabText"
+            android:textStyle="bold" />
+
+
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/addFab"
             android:layout_width="wrap_content"
@@ -33,10 +44,29 @@
             android:background="@color/tabBackground"
             android:src="@drawable/ic_add_black_24dp"
             android:tint="#FFF"
-            app:backgroundTint="@color/tabBackground">
+            app:backgroundTint="@color/tabBackground"
 
+            >
         </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
+        <!--
+        <Button
+            android:id="@+id/button"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="@color/tabBackground"
+            android:src="@drawable/ic_add_black_24dp"
+            android:drawableTint="@color/tabText"
+            android:text="Hola"
+            >
+
+        </Button>
+        -->
 
     </RelativeLayout>
 

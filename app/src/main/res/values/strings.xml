@@ -8,5 +8,7 @@
     <string name="menu_icon_description">This is the menu icon</string>
     <string name="hint_date_text">Date</string>
     <string name="date">Date</string>
+    <string name="add_goal_text">Add a Goal</string>
+    <string name="set_a_goal_base_text">Set a GOAL</string>
 
 </resources>
