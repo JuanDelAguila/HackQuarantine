@@ -1,7 +1,9 @@
 package com.jda.hackquarantine;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
@@ -13,9 +15,10 @@ import com.google.android.material.internal.NavigationMenuItemView;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
-import com.jda.hackquarantine.ui.SectionsPagerAdapter;
 import com.jda.hackquarantine.ui.home.HomeFragment;
+import com.jda.hackquarantine.ui.home.TabPagerAdapter;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -51,6 +54,17 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });*/
+
+        LayoutInflater layoutInflater = (LayoutInflater)this.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View view = layoutInflater.inflate(R.layout.fragment_home, null);
+
+        TabLayout tabLayout = (TabLayout) view.findViewById(R.id.tabLayout);
+        ViewPager pager = (ViewPager) view.findViewById(R.id.view_pager);
+
+        TabPagerAdapter tabPagerAdapter = new TabPagerAdapter(getSupportFragmentManager());
+        pager.setAdapter(tabPagerAdapter);
+        tabLayout.setupWithViewPager(pager);
+
         final DrawerLayout drawer = findViewById(R.id.drawer_layout);
         final NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
@@ -80,19 +94,6 @@ public class MainActivity extends AppCompatActivity {
                 navController.navigateUp();
             }
         });
-
-        /**
-         * Code to change tabs in home
-         */
-
-        SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
-
-        View inflatedView = getLayoutInflater().inflate(R.layout.fragment_home, null);
-
-        ViewPager viewPager = (ViewPager) inflatedView.findViewById(R.id.view_pager);
-        viewPager.setAdapter(sectionsPagerAdapter);
-        TabLayout tabs = (TabLayout) inflatedView.findViewById(R.id.tabLayout);
-        tabs.setupWithViewPager(viewPager);
 
     }
 
